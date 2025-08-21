@@ -29,7 +29,7 @@
                     <td>@item.StudentNumber</td>
                     <td>@item.StudentName</td>
                     <td>@item.StudentSurname</td>
-                    <td>@item.SchoolClass.SchoolClassNumber</td>
+                    <td>@item.SchoolClass?.SchoolClassNumber</td>
                 </tr>
             }
         </tbody>
@@ -46,7 +46,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Number</label>
-                            <input name="StudentNumber" type="number" class="form-control" required />
+                            <input name="StudentNumber" type="number" class="form-control" required min="1" max="99999" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Name</label>
@@ -88,7 +88,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Number</label>
-                            <input name="StudentNumber" type="number" id="edit-code" class="form-control" required />
+                            <input name="StudentNumber" type="number" id="edit-number" class="form-control" required />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Name</label>
