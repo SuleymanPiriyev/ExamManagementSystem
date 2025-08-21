@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<form asp-action="Create" id="createform" enctype="multipart/form-data">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">@ViewData["Title"]</h5>
+        </div>
+        <div class="panel-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row">
+                @RenderBody()
+            </div>
+            <div>
+                <a asp-action="Index" id="goIndex" class="btn btn-primary"><i class="icon-arrow-left13 position-left"></i>Back to List</a>
+                <button type="submit" id="createsave" class="btn btn-success">Create<i class="icon-floppy-disk position-right"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+@RenderSection("Components", false)
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    @RenderSection("Scripts", false)
+}
