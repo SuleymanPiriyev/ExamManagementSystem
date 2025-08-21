@@ -49,10 +49,10 @@
         new Chart(document.getElementById("studentsPerClassChart"), {
             type: "bar",
             data: {
-                labels: ["Class A", "Class B", "Class C", "Class D"],
+                labels: @Html.Raw(ViewBag.StudentsPerClassLabels),
                 datasets: [{
                     label: "Students",
-                    data: [25, 30, 20, 15],
+                    data: @Html.Raw(ViewBag.StudentsPerClassData),
                     backgroundColor: "rgba(54, 162, 235, 0.7)"
                 }]
             }
@@ -61,10 +61,10 @@
         new Chart(document.getElementById("examsPerLessonChart"), {
             type: "bar",
             data: {
-                labels: ["Math", "Physics", "Chemistry", "Biology"],
+                labels: @Html.Raw(ViewBag.ExamsPerLessonLabels),
                 datasets: [{
                     label: "Exams",
-                    data: [5, 3, 4, 2],
+                    data: @Html.Raw(ViewBag.ExamsPerLessonData),
                     backgroundColor: "rgba(255, 99, 132, 0.7)"
                 }]
             }
@@ -73,10 +73,10 @@
         new Chart(document.getElementById("teachersPerLessonChart"), {
             type: "bar",
             data: {
-                labels: ["Math", "Physics", "Chemistry", "Biology"],
+                labels: @Html.Raw(ViewBag.LessonsPerTeacherLabels),
                 datasets: [{
-                    label: "Teachers",
-                    data: [2, 1, 3, 2],
+                    label: "Lessons",
+                    data: @Html.Raw(ViewBag.LessonsPerTeacherData),
                     backgroundColor: "rgba(75, 192, 192, 0.7)"
                 }]
             }
@@ -85,10 +85,10 @@
         new Chart(document.getElementById("examResultsChart"), {
             type: "bar",
             data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+                labels: @Html.Raw(ViewBag.ExamResultsLabels),
                 datasets: [{
                     label: "Average Score",
-                    data: [70, 75, 80, 85, 78],
+                    data: @Html.Raw(ViewBag.ExamResultsData),
                     backgroundColor: "rgba(255, 159, 64, 0.7)"
                 }]
             }
