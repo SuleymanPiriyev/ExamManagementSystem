@@ -7,6 +7,7 @@ namespace ExamManagementSystem.Models
     {
         public int Id { get; set; }
         public DateTime ExamDate { get; set; }
+        [Range(1,9)]
         public int ExamScore { get; set; }
 
         public int? LessonId { get; set; }
